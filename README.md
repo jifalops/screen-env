@@ -24,6 +24,7 @@ bower install --save screen-env
       is-mobile="{{isMobile}}"
       is-tablet="{{isTablet}}"
       is-desktop="{{isDesktop}}"
+      is-fullscreen="{{isFullscreen}}"
       window-height="{{windowHeight}}"
       window-width="{{windowWidth}}"
       window-aspect="{{windowAspect}}"
@@ -55,12 +56,13 @@ bower install --save screen-env
       ua-is-mobile="{{uaIsMobile}}"
       ua-is-tablet="{{uaIsTablet}}"
       ua-is-desktop="{{uaIsDesktop}}">
-    </screen-env> 
+    </screen-env>
     <table>
       <tr><td>isTouch</td><td>[[isTouch]]</td></tr>
       <tr><td>isMobile</td><td>[[isMobile]]</td></tr>
       <tr><td>isTablet</td><td>[[isTablet]]</td></tr>
       <tr><td>isDesktop</td><td>[[isDesktop]]</td></tr>
+      <tr><td>isFullscreen</td><td>[[isFullscreen]]</td></tr>
       <tr><td>windowHeight</td><td>[[windowHeight]]</td></tr>
       <tr><td>windowWidth</td><td>[[windowWidth]]</td></tr>
       <tr><td>windowAspect</td><td>[[windowAspect]]</td></tr>
@@ -98,7 +100,7 @@ bower install --save screen-env
 -->
 
 ```html
-
+(See the full demo below)
 ```
 
 Full demo:

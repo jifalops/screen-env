@@ -98,6 +98,15 @@ Differentiate screen types by size, touch ability, and more.
           readOnly: true,
           notify: true
         },
+        /**
+         * Changes with `window.onresize`,
+         * allows system toolbar, status bar, etc.
+         */
+        isFullscreen: {
+          type: Boolean,
+          readOnly: true,
+          notify: true
+        },
         /** CSS media query */
         mediaHandheld: {
           type: Boolean,
@@ -277,6 +286,9 @@ Differentiate screen types by size, touch ability, and more.
         this._setScreenWidth(window.screen.width);
         this._setScreenHeight(window.screen.height);
         this._setScreenAspect(this.screenWidth / this.screenHeight);
+
+        this._setIsFullscreen(this.windowWidth == window.screen.availWidth
+          && this.windowHeight == window.screen.availHeight);
       },
 
       _computeIsMobile: function(sp, mp, lp, sl, ml, ll, uaIsMobile, mediaTv) {
