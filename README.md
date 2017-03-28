@@ -18,45 +18,7 @@ bower install --save screen-env
   <template is="dom-bind">
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="screen-env.html">
-    <next-code-block></next-code-block>
-    <screen-env
-      is-touch="{{isTouch}}"
-      is-mobile="{{isMobile}}"
-      is-tablet="{{isTablet}}"
-      is-desktop="{{isDesktop}}"
-      is-fullscreen="{{isFullscreen}}"
-      window-height="{{windowHeight}}"
-      window-width="{{windowWidth}}"
-      window-aspect="{{windowAspect}}"
-      media-handheld="{{mediaHandheld}}"
-      screen-height="{{screenHeight}}"
-      screen-width="{{screenWidth}}"
-      screen-aspect="{{screenAspect}}"
-      media-handheld="{{mediaHandheld}}"
-      media-screen="{{mediaScreen}}"
-      media-print="{{mediaPrint}}"
-      media-tv="{{mediaTv}}"
-      portrait="{{portrait}}"
-      landscape="{{landscape}}"
-      window-extra-small="{{windowExtraSmall}}"
-      window-small="{{windowSmall}}"
-      window-medium="{{windowMedium}}"
-      window-large="{{windowLarge}}"
-      window-extra-large="{{windowExtraLarge}}"
-      mobile-small-portrait="{{mobileSmallPortrait}}"
-      mobile-medium-portrait="{{mobileMediumPortrait}}"
-      mobile-large-portrait="{{mobileLargePortrait}}"
-      tablet-small-portrait="{{tabletSmallPortrait}}"
-      tablet-large-portrait="{{tabletLargePortrait}}"
-      mobile-small-landscape="{{mobileSmallLandscape}}"
-      mobile-medium-landscape="{{mobileMediumLandscape}}"
-      mobile-large-landscape="{{mobileLargeLandscape}}"
-      tablet-small-landscape="{{tabletSmallLandscape}}"
-      tablet-large-landscape="{{tabletLargeLandscape}}"
-      ua-is-mobile="{{uaIsMobile}}"
-      ua-is-tablet="{{uaIsTablet}}"
-      ua-is-desktop="{{uaIsDesktop}}">
-    </screen-env>
+    <next-code-block></next-code-block>    
     <table>
       <tr><td>isTouch</td><td>[[isTouch]]</td></tr>
       <tr><td>isMobile</td><td>[[isMobile]]</td></tr>
@@ -101,6 +63,44 @@ bower install --save screen-env
 
 ```html
 (See the full demo below)
+<screen-env
+  is-touch="{{isTouch}}"
+  is-mobile="{{isMobile}}"
+  is-tablet="{{isTablet}}"
+  is-desktop="{{isDesktop}}"
+  is-fullscreen="{{isFullscreen}}"
+  window-height="{{windowHeight}}"
+  window-width="{{windowWidth}}"
+  window-aspect="{{windowAspect}}"
+  media-handheld="{{mediaHandheld}}"
+  screen-height="{{screenHeight}}"
+  screen-width="{{screenWidth}}"
+  screen-aspect="{{screenAspect}}"
+  media-handheld="{{mediaHandheld}}"
+  media-screen="{{mediaScreen}}"
+  media-print="{{mediaPrint}}"
+  media-tv="{{mediaTv}}"
+  portrait="{{portrait}}"
+  landscape="{{landscape}}"
+  window-extra-small="{{windowExtraSmall}}"
+  window-small="{{windowSmall}}"
+  window-medium="{{windowMedium}}"
+  window-large="{{windowLarge}}"
+  window-extra-large="{{windowExtraLarge}}"
+  mobile-small-portrait="{{mobileSmallPortrait}}"
+  mobile-medium-portrait="{{mobileMediumPortrait}}"
+  mobile-large-portrait="{{mobileLargePortrait}}"
+  tablet-small-portrait="{{tabletSmallPortrait}}"
+  tablet-large-portrait="{{tabletLargePortrait}}"
+  mobile-small-landscape="{{mobileSmallLandscape}}"
+  mobile-medium-landscape="{{mobileMediumLandscape}}"
+  mobile-large-landscape="{{mobileLargeLandscape}}"
+  tablet-small-landscape="{{tabletSmallLandscape}}"
+  tablet-large-landscape="{{tabletLargeLandscape}}"
+  ua-is-mobile="{{uaIsMobile}}"
+  ua-is-tablet="{{uaIsTablet}}"
+  ua-is-desktop="{{uaIsDesktop}}">
+</screen-env>
 ```
 
 Full demo:

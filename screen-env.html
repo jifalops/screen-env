@@ -295,7 +295,7 @@ Differentiate screen types by size, touch ability, and more.
         return sp || mp || lp || sl || ml || ll || (uaIsMobile && !mediaTv);
       },
       _computeIsTablet: function(sp, lp, sl, ll, uaIsTablet, mediaTv) {
-        return !mediaTv && (sp || lp || sl || ll || (uaIsTablet && !mediaTv));
+        return sp || lp || sl || ll || (uaIsTablet && !mediaTv);
       },
       _computeIsDesktop: function(isMobile, isTablet) {
         return !isMobile && !isTablet;
