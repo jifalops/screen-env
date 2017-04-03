@@ -247,6 +247,12 @@ Differentiate screen types by size, touch ability, and more.
           type: Boolean,
           // readyOnly: true,
           notify: true
+        },
+        /** Alias for `windowExtraSmall` (600px wide or less) */
+        narrowWidth: {
+          type: Boolean,
+          notify: true,
+          computed: '_computeNarrowWidth(windowExtraSmall)'
         }
       },
 
@@ -291,6 +297,10 @@ Differentiate screen types by size, touch ability, and more.
           && this.windowHeight == window.screen.availHeight);
       },
 
+      _computeNarrowWidth: function(windowExtraSmall) {
+        return windowExtraSmall;
+      },
+      /* [small|medium|large] [portrait|landscape] */
       _computeIsMobile: function(sp, mp, lp, sl, ml, ll, uaIsMobile, mediaTv) {
         return sp || mp || lp || sl || ml || ll || (uaIsMobile && !mediaTv);
       },

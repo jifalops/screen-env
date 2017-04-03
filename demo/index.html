@@ -21,6 +21,7 @@
       <demo-snippet>
         <template is="dom-bind" id="ex1">
           <screen-env
+            narrow-width="{{narrowWidth}}"
             is-touch="{{isTouch}}"
             is-mobile="{{isMobile}}"
             is-tablet="{{isTablet}}"
@@ -59,6 +60,7 @@
             ua-is-desktop="{{uaIsDesktop}}">
           </screen-env>
           <table>
+            <tr><td>narrowWidth</td><td>[[narrowWidth]]</td></tr>
             <tr><td>isTouch</td><td>[[isTouch]]</td></tr>
             <tr><td>isMobile</td><td>[[isMobile]]</td></tr>
             <tr><td>isTablet</td><td>[[isTablet]]</td></tr>
