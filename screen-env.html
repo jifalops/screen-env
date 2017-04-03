@@ -53,7 +53,7 @@ Differentiate screen types by size, touch ability, and more.
       properties: {
         /**
          * Whether a touch screen is being used.
-         * @return `true` if a touchstart event occurs,
+         * Returns `true` if a touchstart event occurs,
          * `false` if not supported by the browser,
          * or `null` if supported by the browser but a touch event hasn't occurred.
          */
@@ -99,8 +99,8 @@ Differentiate screen types by size, touch ability, and more.
           notify: true
         },
         /**
-         * Changes with `window.onresize`,
-         * allows system toolbar, status bar, etc.
+         * Uses `screen.availWidth` and `screen.availHeight`.
+         * Changes with `window.onresize`.
          */
         isFullscreen: {
           type: Boolean,
