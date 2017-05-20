@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../polymer/lib/utils/render-status.html">
 <link rel="import" href="../iron-media-query/iron-media-query.html">
 
 <!--
@@ -268,20 +269,23 @@ Differentiate screen types by size, touch ability, and more.
 
       connectedCallback() {
         // super();
-        this._setWindowDimens();
-        window.addEventListener('resize', this._boundResizeListener);
 
-        // Browser touch support
-        if ('ontouchstart' in window || navigator.maxTouchPoints) {
-          this._setProperty('isTouch', null);
-          window.addEventListener('touchstart', this._boundTouchstartListener);
-        } else {
-          this._setProperty('isTouch', false);
-        }
+        Polymer.RenderStatus.afterNextRender(this, () => {
+          this._setWindowDimens();
+          window.addEventListener('resize', this._boundResizeListener);
 
-        this.uaIsMobile = this._uaIsMobile();
-        this.uaIsTablet = !this.uaIsMobile && this._uaIsMobileOrTablet();
-        this.uaIsDesktop = !this.uaIsMobile && !this.uaIsTablet;
+          // Browser touch support
+          if ('ontouchstart' in window || navigator.maxTouchPoints) {
+            this._setProperty('isTouch', null);
+            window.addEventListener('touchstart', this._boundTouchstartListener);
+          } else {
+            this._setProperty('isTouch', false);
+          }
+
+          this.uaIsMobile = this._uaIsMobile();
+          this.uaIsTablet = !this.uaIsMobile && this._uaIsMobileOrTablet();
+          this.uaIsDesktop = !this.uaIsMobile && !this.uaIsTablet;
+        });
       }
 
       disconnectedCallback() {
